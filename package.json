@@ -1,0 +1,29 @@
+{
+  "name": "laryum-bot",
+  "version": "1.0.0",
+  "description": "Bot de música para Discord",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyrsk/laryum-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lyrsk/laryum-bot/issues"
+  },
+  "homepage": "https://github.com/lyrsk/laryum-bot#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  },
+  "dependencies": {
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3"
+  }
+}
