@@ -19,7 +19,7 @@ const deployCommands = async (commands) => { // Despliega los comandos
   const rest = new REST({ version: '10' }).setToken(process.env.TOKEN)
 
   try {
-    console.log(`Started refreshing ${commands.length} application (/) commands.`)
+    console.log(`Comenzando actualización de ${commands.length} comandos de la aplicación...`)
 
     // const data = await rest.put( // Actualiza los comandos globalmente
     //   Routes.applicationCommands(process.env.CLIENT_ID),
@@ -30,7 +30,7 @@ const deployCommands = async (commands) => { // Despliega los comandos
       Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),
       { body: commands }
     )
-    console.log(`Successfully reloaded ${data.length} application (/) commands.`)
+    console.log(`Se actualizaron con éxito ${data.length} comandos de la aplicación.`)
   } catch (error) {
     console.error(error)
   }
