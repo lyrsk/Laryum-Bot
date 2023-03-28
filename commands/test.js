@@ -5,6 +5,6 @@ module.exports = {
     .setName('test')
     .setDescription('Para testear esta mierda'),
   async execute (interaction) {
-    await interaction.reply('Sí funciono <3')
+    await interaction.reply('Sí funciono ❤️')
   }
 }
