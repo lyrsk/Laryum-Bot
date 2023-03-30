@@ -5,5 +5,6 @@ module.exports = {
   once: true,
   execute (client) {
     console.log(`¡Listo! Conectado como ${client.user.tag}`)
+    client.user.setActivity('Test')
   }
 }
