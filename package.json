@@ -5,20 +5,19 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js",
-    "deploy": "node deploy.js"
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lyrsk/laryum-bot.git"
+    "url": "git+https://github.com/lyrsk/LaryumBot.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lyrsk/laryum-bot/issues"
+    "url": "https://github.com/lyrsk/LaryumBot/issues"
   },
-  "homepage": "https://github.com/lyrsk/laryum-bot#readme",
+  "homepage": "https://github.com/lyrsk/LaryumBot#readme",
   "devDependencies": {
     "nodemon": "^2.0.21",
     "standard": "^17.0.0"
