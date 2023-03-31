@@ -1,13 +1,14 @@
 const { OpenAIApi, Configuration } = require('openai')
 const { Events } = require('discord.js')
+require('dotenv').config()
 
 function startBot (client) {
   const config = new Configuration({
     apiKey: process.env.OPENAI_KEY
   })
   const openai = new OpenAIApi(config)
-  const BOT_CHANNEL = '1082512312713359363'
-  const PAST_MESSAGES = 10 // El bot lee los últimos 5 mensajes de la conversación
+  const BOT_CHANNEL = (process.env.BOT_CHANNEL)
+  const PAST_MESSAGES = 10 // El bot lee los últimos 10 mensajes de la conversación
 
   client.on(Events.MessageCreate, async (message) => {
     if (message.author.bot) return

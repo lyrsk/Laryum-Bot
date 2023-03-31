@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const { Client, Collection, GatewayIntentBits } = require('discord.js')
 const { startBot } = require('./chatBot/bot.js')
-const dotenv = require('dotenv'); dotenv.config()
+require('dotenv').config()
 
 const client = new Client({
   intents: [
