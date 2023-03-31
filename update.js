@@ -3,13 +3,13 @@ const path = require('node:path')
 const { REST, Routes } = require('discord.js')
 const dotenv = require('dotenv'); dotenv.config()
 
-const loadCommands = () => { // Carga los comandos
+const loadCommands = (folder) => { // Carga los comandos
   const commands = []
-  const commandsPath = path.join(__dirname, 'commands')
+  const commandsPath = path.join(__dirname, 'commands', folder)
   const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'))
 
   for (const file of commandFiles) {
-    const command = require(`./commands/${file}`)
+    const command = require(`./commands/${folder}/${file}`)
     commands.push(command.data.toJSON())
   }
   return commands
@@ -37,7 +37,9 @@ const deployCommands = async (commands) => { // Despliega los comandos
 }
 
 const main = async () => {
-  const commands = loadCommands()
+  const commandsBasic = loadCommands('basic')
+  const commandsInteraction = loadCommands('interaction')
+  const commands = commandsBasic.concat(commandsInteraction)
   await deployCommands(commands)
 }
 
