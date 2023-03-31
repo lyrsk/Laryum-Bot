@@ -1,15 +1,15 @@
 const fs = require('node:fs')
 const path = require('node:path')
 const { REST, Routes } = require('discord.js')
-const dotenv = require('dotenv'); dotenv.config()
+require('dotenv').config()
 
 const loadCommands = (folder) => { // Carga los comandos
   const commands = []
-  const commandsPath = path.join(__dirname, 'commands', folder)
+  const commandsPath = path.join(__dirname, '..', 'commands', folder)
   const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'))
-
+  console.log(commandsPath)
   for (const file of commandFiles) {
-    const command = require(`./commands/${folder}/${file}`)
+    const command = require(`${commandsPath}/${file}`)
     commands.push(command.data.toJSON())
   }
   return commands
