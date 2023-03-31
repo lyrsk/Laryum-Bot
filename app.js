@@ -1,9 +1,16 @@
 const fs = require('fs')
 const path = require('path')
 const { Client, Collection, GatewayIntentBits } = require('discord.js')
+const { startBot } = require('./chatBot/bot.js')
 const dotenv = require('dotenv'); dotenv.config()
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds] })
+const client = new Client({
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent
+  ]
+})
 
 // Carga los eventos
 function loadEvents (client) {
@@ -46,6 +53,7 @@ const main = async (client) => {
   loadEvents(client)
   loadCommands(client, 'basic')
   loadCommands(client, 'interaction')
+  startBot(client)
 }
 
 main(client)
