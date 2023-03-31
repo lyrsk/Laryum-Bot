@@ -15,7 +15,7 @@ function deleteGlobalCommand (id) { // Elimina comandos globales según su ID
     .catch(console.error)
 }
 
-function deleteAllCommandServer () { // Elimina todos los comandos de un servidor específico
+function deleteAllServerCommands () { // Elimina todos los comandos de un servidor específico
   rest.put(Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID), { body: [] })
     .then(() => console.log('Eliminados con éxito todos los comandos del servidor'))
     .catch(console.error)
@@ -27,7 +27,7 @@ function deleteAllGlobalCommands () { // Elimina todos los comandos globales
     .catch(console.error)
 }
 
-// deleteCommand('')
+deleteCommand('')
 // deleteGlobalCommand('')
-// deleteAllCommandServer()
+// deleteAllServerCommands()
 // deleteAllGlobalCommands()
