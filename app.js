@@ -26,8 +26,8 @@ function loadEvents (client) {
 // Carga los comandos
 client.commands = new Collection()
 
-function loadCommands (client) {
-  const commandsPath = path.join(__dirname, 'commands')
+function loadCommands (client, folder) {
+  const commandsPath = path.join(__dirname, 'commands', folder)
   const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'))
 
   for (const file of commandFiles) {
@@ -44,7 +44,8 @@ function loadCommands (client) {
 
 const main = async (client) => {
   loadEvents(client)
-  loadCommands(client)
+  loadCommands(client, 'basic')
+  loadCommands(client, 'interaction')
 }
 
 main(client)
