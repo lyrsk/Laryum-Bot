@@ -49,4 +49,6 @@ function startBot (client) {
   })
 }
 
-module.exports = { startBot }
+module.exports = {
+  startBot
+}
