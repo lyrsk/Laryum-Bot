@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const { Client, Collection, GatewayIntentBits } = require('discord.js')
-const { startBot } = require('./chatBot/bot.js')
+const { startBot } = require('./src/chatBot/bot.js')
 require('dotenv').config()
 
 const client = new Client({
@@ -14,7 +14,7 @@ const client = new Client({
 
 // Carga los eventos
 function loadEvents (client) {
-  const eventsPath = path.join(__dirname, 'events')
+  const eventsPath = path.join(__dirname, 'src', 'events')
   const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'))
 
   for (const file of eventFiles) {
@@ -34,7 +34,7 @@ function loadEvents (client) {
 client.commands = new Collection()
 
 function loadCommands (client, folder) {
-  const commandsPath = path.join(__dirname, 'commands', folder)
+  const commandsPath = path.join(__dirname, 'src', 'commands', folder)
   const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'))
 
   for (const file of commandFiles) {
