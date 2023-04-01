@@ -1,2 +1,2 @@
-# laryum-bot
+# Laryum Bot
 Bot de música para Discord
