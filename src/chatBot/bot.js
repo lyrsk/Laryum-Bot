@@ -7,7 +7,7 @@ function startBot (client) {
     apiKey: process.env.OPENAI_KEY
   })
   const openai = new OpenAIApi(config)
-  const BOT_CHANNEL = (process.env.BOT_CHANNEL)
+  const BOT_CHANNEL = (process.env.BOT_CHANNEL) // ID del canal donde el bot responderá
   const PAST_MESSAGES = 10 // El bot lee los últimos 10 mensajes de la conversación
 
   client.on(Events.MessageCreate, async (message) => {
