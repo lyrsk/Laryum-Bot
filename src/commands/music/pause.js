@@ -14,7 +14,7 @@ module.exports = {
 
     if (!queue) return interaction.followUp('❌ Aún no hay ninguna canción en la lista ❌')
     if (queue.paused === true) return interaction.followUp('⚠️ La canción ya está pausada ⚠️')
-    interaction.followUp({ content: 'Música pausada ✅' })
+    interaction.followUp({ content: '⏸️' })
 
     client.distube.pause(interaction)
   }
