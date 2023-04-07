@@ -14,8 +14,8 @@ module.exports = {
 
     if (queue.paused === false) return interaction.followUp('⚠️ La canción ya está sonando ⚠️')
     if (!queue) return interaction.followUp('❌ Aún no hay ninguna canción en la lista ❌')
-    interaction.followUp({ content: 'Canción restaurada ✅' })
+    interaction.followUp({ content: 'Canción reanurada ✅' })
 
-    queue.restart()
+    queue.resume()
   }
 }
