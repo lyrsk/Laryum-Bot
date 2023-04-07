@@ -13,9 +13,10 @@ module.exports = {
     const queue = client.distube.getQueue(interaction)
 
     if (!queue) return interaction.followUp('❌ Aún no hay ninguna canción en la lista ❌')
+
     client.distube.voices.leave(interaction)
-    await interaction.followUp('⏹️').catch(err => {
-      console.log(err)
-    })
+
+    const message = await interaction.followUp('Stop')
+    await message.react('⏹️')
   }
 }
