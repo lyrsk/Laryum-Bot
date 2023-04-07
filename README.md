@@ -46,3 +46,12 @@ node app
 - [Discord.JS](https://discord.js.org/#/) 
 - [OpenAI](https://platform.openai.com)
 - [Distube.JS](https://distube.js.org/#/)
+<style>
+hr {
+  border: none;
+  border-top: 8px solid black;
+  margin: 20px 0;
+}
+</style>
+
+<hr>
