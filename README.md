@@ -42,7 +42,7 @@ Ejecute lo siguiente para encender el bot de Discord:
 ```
 node app
 ```
-## Contruido con 🛠️
+## Construido con 🛠️
 - [Discord.JS](https://discord.js.org/#/) 
 - [OpenAI](https://platform.openai.com)
 - [Distube.JS](https://distube.js.org/#/)
@@ -55,4 +55,3 @@ node app
 MIT License
 ```
 
-<hr> 
