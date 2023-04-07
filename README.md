@@ -2,7 +2,7 @@
 
 
 ## Descripción 💫
-Laryum es un bot que puede reproducir música y viene integrado con ChatGPT 🤖
+Laryum es un bot de entretenimiento que ha sido integrada con ChatGPT para ofrecer una experiencia más completa y variada a los usuarios. Este bot tiene la capacidad de reproducir música de diferentes géneros y artistas, permitiendo a los usuarios disfrutar de sus canciones favoritas sin tener que abandonar la conversación en la que se encuentran 🤖
 ## Captura de pantalla 📌
 [![image.png](https://i.postimg.cc/GmwPzkPs/image.png)](https://postimg.cc/ZCHy5vMT)
 
