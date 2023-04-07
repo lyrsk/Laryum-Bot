@@ -26,8 +26,6 @@ module.exports = {
       .addFields({ name: 'Title', value: `${tracks.title}`, inline: true })
       .addFields({ name: 'Author', value: `${tracks.author}`, inline: true })
       .addFields({ name: 'Time', value: `${tracks.duration}`, inline: true })
-      .addFields({ name: 'Views', value: `${tracks.views}`, inline: true })
-      .addFields({ name: 'Thumbnail', value: '[Click](' + tracks.thumbnail + ')', inline: true })
       .addFields({ name: 'Video', value: '[Click](' + tracks.url + ')', inline: true })
       .setColor('Random')
       .setImage(`${tracks.thumbnail || 'https://cdn.discordapp.com/attachments/997487955860009038/1009062859889705062/Baslksz-1.png'}`)
