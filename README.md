@@ -35,6 +35,7 @@ OPENAI_KEY= #Clave de OpenAI
 BOT_CHANNEL= #ID del canal en el que se ejecutará el chatbot
 ```
 > ID de la aplicación (bot) se encuentra en el portal para desarrolladores de Discord.
+>
 > ID del servidor de Discord puede obtenerse dando click derecho al nombre del servidor y copiando su ID.
 ## Despliegue 🚀
 Ejecute lo siguiente para encender el bot de Discord:
