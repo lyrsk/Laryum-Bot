@@ -13,7 +13,10 @@ module.exports = {
 
     if (!queue) return interaction.followUp('❌ Aún no hay ninguna canción en la lista ❌')
     if (queue.songs.length === 1) return interaction.followUp('No song found in the queue!')
+
     client.distube.skip(interaction)
-    return interaction.followUp('⏩')
+
+    const message = await interaction.followUp('Skip')
+    await message.react('⏭️')
   }
 }
