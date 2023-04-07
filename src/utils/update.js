@@ -39,7 +39,8 @@ const deployCommands = async (commands) => { // Despliega los comandos
 const main = async () => {
   const commandsBasic = loadCommands('basic')
   const commandsInteraction = loadCommands('interaction')
-  const commands = commandsBasic.concat(commandsInteraction)
+  const commandsMusic = loadCommands('music')
+  const commands = [...commandsBasic, ...commandsInteraction, ...commandsMusic]
   await deployCommands(commands)
 }
 
