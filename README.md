@@ -46,3 +46,13 @@ node app
 - [Discord.JS](https://discord.js.org/#/) 
 - [OpenAI](https://platform.openai.com)
 - [Distube.JS](https://distube.js.org/#/)
+
+## Autor
+- [@lyrsk]
+
+## Licencia
+```
+MIT License
+```
+
+<hr> 
