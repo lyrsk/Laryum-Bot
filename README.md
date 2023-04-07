@@ -37,6 +37,8 @@ BOT_CHANNEL= #ID del canal en el que se ejecutará el chatbot
 > ID de la aplicación (bot) se encuentra en el portal para desarrolladores de Discord.
 >
 > ID del servidor de Discord puede obtenerse dando click derecho al nombre del servidor y copiando su ID.
+>
+> 💡 En caso de que la canción se corte sin motivo, cambie la región del canal de voz 💡
 ## Despliegue 🚀
 Ejecute lo siguiente para encender el bot de Discord:
 ```
@@ -47,10 +49,10 @@ node app
 - [OpenAI](https://platform.openai.com)
 - [Distube.JS](https://distube.js.org/#/)
 
-## Autor
+## Autor ✒️
 - [@lyrsk]
 
-## Licencia
+## Licencia📄
 ```
 MIT License
 ```
