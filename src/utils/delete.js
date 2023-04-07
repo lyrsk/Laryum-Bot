@@ -27,7 +27,7 @@ function deleteAllGlobalCommands () { // Elimina todos los comandos globales
     .catch(console.error)
 }
 
-deleteCommand('')
+// deleteCommand('1093397024721866844')
 // deleteGlobalCommand('')
 // deleteAllServerCommands()
-// deleteAllGlobalCommands()
+deleteAllGlobalCommands()

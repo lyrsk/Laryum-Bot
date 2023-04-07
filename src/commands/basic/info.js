@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('discord.js')
 
-module.exports = { // Test
+module.exports = { // Mejorar
   data: new SlashCommandBuilder()
     .setName('info')
     .setDescription('Get info about a user or a server!')
@@ -14,7 +14,7 @@ module.exports = { // Test
         .setName('server')
         .setDescription('Info about the server')),
 
-  async execute (interaction) {
+  async run (client, interaction) {
     if (interaction.options.getSubcommand() === 'user') {
       const user = interaction.options.getUser('target')
 

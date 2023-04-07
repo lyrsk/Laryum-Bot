@@ -26,7 +26,7 @@ function loadCommands (client, folder) { // Carga los comandos
     const filePath = path.join(commandsPath, file)
     const command = require(filePath)
 
-    if ('data' in command && 'execute' in command) {
+    if ('data' in command && 'run' in command) {
       client.commands.set(command.data.name, command)
     } else {
       console.log(`[ADVERTENCIA] Al comando en ${filePath} le falta una propiedad requerida de "datos" o "ejecutar".`)

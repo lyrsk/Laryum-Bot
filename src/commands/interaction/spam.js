@@ -7,7 +7,7 @@ module.exports = { // Mejorar
     .addUserOption(option => option.setName('target').setDescription('El usuario al que quieres enviar el spam').setRequired(true))
     .addStringOption(option => option.setName('mensaje').setDescription('El mensaje que se enviará en spam').setRequired(true)),
 
-  async execute (interaction) {
+  async run (client, interaction) {
     const target = interaction.options.getUser('target')
     const message = (interaction.options.getString('mensaje') + ' \n').repeat(5)
 
