@@ -21,15 +21,16 @@ const deployCommands = async (commands) => { // Despliega los comandos
   try {
     console.log(`Comenzando actualización de ${commands.length} comandos de la aplicación...`)
 
-    // const data = await rest.put( // Actualiza los comandos globalmente
-    //   Routes.applicationCommands(process.env.CLIENT_ID),
+    const data = await rest.put( // Actualiza los comandos globalmente
+      Routes.applicationCommands(process.env.CLIENT_ID),
+      { body: commands }
+    )
+
+    // const data = await rest.put( // Actualiza los comandos en un servidor específico
+    //   Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),
     //   { body: commands }
     // )
 
-    const data = await rest.put( // Actualiza los comandos en un servidor específico
-      Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),
-      { body: commands }
-    )
     console.log(`Se actualizaron con éxito ${data.length} comandos de la aplicación.`)
   } catch (error) {
     console.error(error)

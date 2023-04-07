@@ -14,7 +14,7 @@ module.exports = {
 
     if (!queue) return interaction.followUp('❌ Aún no hay ninguna canción en la lista ❌')
     client.distube.voices.leave(interaction)
-    await interaction.followUp('Música finalizada ✅').catch(err => {
+    await interaction.followUp('⏹️').catch(err => {
       console.log(err)
     })
   }
