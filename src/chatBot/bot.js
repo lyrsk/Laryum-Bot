@@ -8,7 +8,7 @@ function startBot (client) {
   })
   const openai = new OpenAIApi(config)
   const BOT_CHANNEL = (process.env.BOT_CHANNEL) // ID del canal donde el bot responderá
-  const PAST_MESSAGES = 5 // El bot lee los últimos 5 mensajes de la conversación
+  const PAST_MESSAGES = 5
 
   client.on(Events.MessageCreate, async (message) => {
     if (message.author.bot) return
@@ -41,7 +41,8 @@ function startBot (client) {
       prompt,
       model: 'text-davinci-003',
       max_tokens: 500,
-      stop: ['\n']
+      stop: ['\n'],
+      temperature: 0.9
     })
 
     console.log('response', response.data.choices[0].text)
