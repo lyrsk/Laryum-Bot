@@ -5,6 +5,6 @@ module.exports = {
   once: true,
   execute (client) {
     console.log(`¡Listo! Conectado como ${client.user.tag}`)
-    client.user.setActivity('Laryum... Larium?')
+    client.user.setActivity('✨')
   }
 }
