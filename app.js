@@ -23,7 +23,7 @@ client.player = player
 
 client.distube = new DisTube(client, {
   leaveOnStop: false,
-  leaveOnFinish: true,
+  leaveOnFinish: false,
   emitNewSongOnly: true,
   emitAddSongWhenCreatingQueue: false,
   emitAddListWhenCreatingQueue: false,
