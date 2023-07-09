@@ -54,7 +54,7 @@ node app
 - [Distube.JS](https://distube.js.org/#/)
 
 ## Autor ✒️
-- [@lyrsk]
+- [@lyrsk - Eliana Dominguez]
 
 ## Licencia📄
 ```
