@@ -41,7 +41,7 @@ const main = async (client) => {
   loadCommands(client, 'basic')
   loadCommands(client, 'interaction')
   loadCommands(client, 'music')
-  startBot(client)
+  // startBot(client)
 }
 
 main(client)
