@@ -40,6 +40,7 @@
     "dotenv": "^16.4.5",
     "ffmpeg-static": "^5.2.0",
     "openai": "^4.37.1",
-    "opusscript": "^0.0.8"
+    "opusscript": "^0.0.8",
+    "sqlite3": "^5.1.7"
   }
 }

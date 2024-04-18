@@ -1,25 +1,24 @@
-const { Client, Collection, GatewayIntentBits } = require('discord.js')
-const { DisTube } = require('distube')
-const { SpotifyPlugin } = require('@distube/spotify')
-const { SoundCloudPlugin } = require('@distube/soundcloud')
-const { YtDlpPlugin } = require('@distube/yt-dlp')
-const { Player } = require('discord-player')
-const { startBot } = require('./src/chatBot/bot.js')
-const { loadEvents, loadCommands } = require('./src/events/load.js')
-require('dotenv').config()
+const { Client, Collection, GatewayIntentBits } = require("discord.js");
+const { DisTube } = require("distube");
+const { SpotifyPlugin } = require("@distube/spotify");
+const { SoundCloudPlugin } = require("@distube/soundcloud");
+const { YtDlpPlugin } = require("@distube/yt-dlp");
+const { Player } = require("discord-player");
+const { loadEvents, loadCommands } = require("./src/events/load.js");
+require("dotenv").config();
 
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.MessageContent,
-    GatewayIntentBits.GuildVoiceStates
-  ]
-})
+    GatewayIntentBits.GuildVoiceStates,
+  ],
+});
 
-const player = new Player(client)
+const player = new Player(client);
 
-client.player = player
+client.player = player;
 
 client.distube = new DisTube(client, {
   leaveOnStop: false,
@@ -30,20 +29,20 @@ client.distube = new DisTube(client, {
   plugins: [
     new SpotifyPlugin({ emitEventsAfterFetching: true }),
     new SoundCloudPlugin(),
-    new YtDlpPlugin()
-  ]
-})
+    new YtDlpPlugin(),
+  ],
+});
 
-client.commands = new Collection()
+client.commands = new Collection();
 
 const main = async (client) => {
-  loadEvents(client)
-  loadCommands(client, 'basic')
-  loadCommands(client, 'interaction')
-  loadCommands(client, 'music')
+  loadEvents(client);
+  loadCommands(client, "basic");
+  loadCommands(client, "interaction");
+  loadCommands(client, "music");
   // startBot(client)
-}
+};
 
-main(client)
+main(client);
 
-client.login(process.env.TOKEN)
+client.login(process.env.TOKEN);
